@@ -5,6 +5,7 @@ require File.expand_path('../application', __FILE__)
 # Initialize the rails application
 RubyChina::Application.initialize!
 
+# https://github.com/mperham/dalli fix passenger problem
 if defined?(PhusionPassenger)
   PhusionPassenger.on_event(:starting_worker_process) do |forked|
     # Reset Rails's object cache
