@@ -41,6 +41,13 @@ task :restart_resque, :roles => :web do
   run "cd #{deploy_to}/current/; RAILS_ENV=production ./script/resque stop; RAILS_ENV=production ./script/resque start"
 end
 
+namespace :remote_rake do
+  desc "Run a task on remote servers, ex: cap staging rake:invoke task=cache:clear"
+  task :invoke do
+    run "cd #{deploy_to}/current; RAILS_ENV=#{rails_env} bundle exec rake #{ENV['task']}"
+  end
+end
+
 # 编译 assets
 task :compile_assets, :roles => :web do
   run "cd #{deploy_to}/current/; bundle exec rake assets:precompile"

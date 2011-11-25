@@ -22,6 +22,8 @@ This is source code of [Ruby China Group](http://ruby-china.org)
   $ cap deploy
   ```
 
+cap production remote_rake:invoke task=db:setup
+
 ## OAuth
 
 * be sure to use: http://ruby-china.dev/
