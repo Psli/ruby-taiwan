@@ -46,7 +46,7 @@ task :compile_assets, :roles => :web do
   run "cd #{deploy_to}/current/; bundle exec rake assets:precompile"
 end
 
-after "deploy:symlink", :init_shared_path, :link_shared_config_yaml, :install_gems, :compile_assets
+after "deploy:symlink", :init_shared_path, :link_shared_config_yaml , :compile_assets
 
 
 
