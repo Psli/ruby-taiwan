@@ -13,6 +13,14 @@
     login: "登錄"
     logout: "登出"
     cancel: "取消"
+    created_at: "發布於"
+    until: "截至"
+    last_by: "最後由"
+  topics:
+    create_topic: "發表討論文"
+    edit_topic: "修改討論文"
+    no_replies: "暫無回文。"
+    check_recent_topics: "查看更多最近發表的討論串..."
   menu:
     topics: "社區"
     wiki: "Wiki"

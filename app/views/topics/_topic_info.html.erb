@@ -6,9 +6,9 @@
         </div>
         <div class="info time">
             <% if topic.last_reply_user.blank? %>
-                发布于 <%= render_topic_created_at(topic) %>
+                <%= t("common.created_at")%> <%= render_topic_created_at(topic) %>
             <% else %>
-                最后由 <%= user_name_tag(topic.last_reply_user) %> 回复于 <%= render_topic_last_be_replied_time(topic) %>
+                <%= t("common.last_by")%> <%= user_name_tag(topic.last_reply_user) %> 回复于 <%= render_topic_last_be_replied_time(topic) %>
             <% end %>
             , <%= topic.hits %>次阅读
         </div>

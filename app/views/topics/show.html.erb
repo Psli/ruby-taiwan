@@ -55,7 +55,7 @@
     <% else %>
     <div id="reply" class="form box">
         <div style="padding:20px;">
-        需要 <a href='/account/sign_in' class="btn primary">登录</a> 后回复方可回复, 如果你还没有账号 <a href="/account/sign_up" class="btn danger"> 点击这里注册</a>。
+        需要 <a href='/account/sign_in' class="btn primary"><%= t("common.login")%></a> 后回复方可回复, 如果你还没有账号 <a href="/account/sign_up" class="btn danger"> 点击这里<%= t("common.register")%></a>。
         </div>
     </div>
     <% end %>
